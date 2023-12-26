@@ -11,13 +11,14 @@ app.set("view engine","ejs")
 // set views folder
 app.set("views",path.join(__dirname,"views"))
 // set public folder
-app.set(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,"public")))
 
 
 app.listen(port,()=>{
     console.log(`Success! Your app is Running on the ${port}`);
 })
 
-app.get('/',(req,res)=>{
-    res.send("Your app is working successfully")
+app.get('/posts',(req,res)=>{
+    let posts = require("./posts")
+    res.render("index.ejs",{posts})
 })
