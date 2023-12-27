@@ -26,7 +26,8 @@ app.post("/posts",(req,res)=>{
     let {username,content} = req.body
     let posts = require('./posts')
     posts.push({username,content})
-    res.send(`@${username} and ${content}`)
+    // redirect res.redirect(URL)
+    res.redirect('/posts')
 })
 
 app.get("/posts/new",(req,res)=>{
