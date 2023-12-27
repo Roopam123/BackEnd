@@ -1,0 +1,39 @@
+h3{
+    color: brown;
+    font-family: sans-serif;
+    text-align: center;
+}
+form{
+    font-family: sans-serif;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(168, 168, 94);
+    padding: 40px 100px;
+    color: white;
+    border-radius: 20px;
+}
+textarea{
+    background-color: rgb(168, 168, 94);
+    border: none;
+}
+input{
+    border-bottom: 2px solid gray;
+    background-color: rgb(168, 168, 94);
+    border: none;
+    color: white;
+}
+textarea:focus,input:focus{
+    outline: none;
+    color: white;
+}
+input::placeholder, textarea::placeholder{
+    color: white;
+    border-bottom: 2px solid  white;
+}
+button{
+    background-color: yellowgreen;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}

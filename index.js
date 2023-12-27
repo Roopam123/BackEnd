@@ -22,3 +22,13 @@ app.get('/posts',(req,res)=>{
     let posts = require("./posts")
     res.render("index.ejs",{posts})
 })
+app.post("/posts",(req,res)=>{
+    let {username,content} = req.body
+    let posts = require('./posts')
+    posts.push({username,content})
+    res.send(`@${username} and ${content}`)
+})
+
+app.get("/posts/new",(req,res)=>{
+    res.render("new.ejs")
+})
